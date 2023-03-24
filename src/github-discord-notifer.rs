@@ -4,9 +4,9 @@ use tokio::*;
 #[no_mangle]
 #[tokio::main(flavor = "current_thread")]
 pub async fn run() -> anyhow::Result<()> {
-    let login = "jaykchen";
-    let owner = "jaykchen";
-    let repo = "vitesse-lite";
+    let login = "alabulei1";
+    let owner = "WasmEdge";
+    let repo = "WasmEdge";
     let label_watch_list = vec![
         "good first issue".to_string(),
         "help wanted".to_string(),
@@ -58,7 +58,7 @@ async fn handler(payload: EventPayload, label_watch_list: &Vec<String>) {
                     r#"A new issue that needs your help: {issue_title} by {user} 
                     {issue_url}"#
                 );
-                send_message_to_channel("ik8", "general", body);
+                send_message_to_channel("secondstate", "contributor", body);
                 return;
             }
         }
